@@ -37,7 +37,7 @@ namespace EasyPrint
 
             if (selectedPrinter == null)
             {
-                MessageBox.Show("没有找到Microsoft XPS Document Writer打印机");
+                MessageBox.Show("没有找到默认打印机");
                 return;
             }
 

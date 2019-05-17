@@ -1,0 +1,17 @@
+﻿<Window x:Class="EasyPrint.Preview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EasyPrint"
+        mc:Ignorable="d"
+        Title="打印预览" Height="450" Width="800">
+    <Grid>
+        <Menu>
+            
+
+            <MenuItem Header="放大"></MenuItem>
+            <MenuItem Header="缩小"></MenuItem>
+        </Menu>
+    </Grid>
+</Window>
