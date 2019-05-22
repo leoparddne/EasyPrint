@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Printing;
+using System.Reflection;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -45,10 +46,26 @@ namespace EasyPrint
             dlg.PrintQueue = selectedPrinter;
 
             dlg.PrintVisual(grid, "print test");
+
             //if (dlg.ShowDialog()==true)
             //{
             //    dlg.PrintVisual(grid, "print test");
             //}
+        }
+
+        private void WebBrowser_Navigated(object sender, NavigationEventArgs e)
+        {
+            SuppressScriptErrors((WebBrowser)sender, true);
+        }
+        public void SuppressScriptErrors(WebBrowser wb, bool Hide)
+        {
+            FieldInfo fiComWebBrowser = typeof(WebBrowser).GetField("_axIWebBrowser2", BindingFlags.Instance | BindingFlags.NonPublic);
+            if (fiComWebBrowser == null) return;
+
+            object objComWebBrowser = fiComWebBrowser.GetValue(wb);
+            if (objComWebBrowser == null) return;
+
+            objComWebBrowser.GetType().InvokeMember("Silent", BindingFlags.SetProperty, null, objComWebBrowser, new object[] { Hide });
         }
     }
 }
