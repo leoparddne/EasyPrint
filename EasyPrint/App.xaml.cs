@@ -12,5 +12,49 @@ namespace EasyPrint
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+
+            if (e.Args.Length != 1)
+            {
+                MessageBox.Show("count:" + e.Args.Length);
+                Shutdown();
+            }
+            else
+            {
+                var value = e.Args[0];
+                var startStr = "easyprint://";
+                if(value.StartsWith(startStr))
+                {
+                    var index = value.IndexOf(startStr);
+                    value = value.Substring(index+ startStr.Length);
+                    //去除末尾【/】
+                    value = value.Substring(0, value.Length-1);
+                    MessageBox.Show("value:" + value);
+                }
+
+                var data = value.Split('&');
+                if(data.Length!=2)
+                {
+                    Shutdown();
+                }
+                switch (data[0])
+                {
+                    //直接打印
+                    case "1":
+                        var window = new EasyPrint.MainWindow(OperatorTypeEnum.PRINT, data[1]);
+                        window.ShowDialog();
+                        break;
+                    //预览
+                    case "2":
+                        var preview = new EasyPrint.MainWindow(OperatorTypeEnum.PREVIEW, data[1]);
+                        preview.ShowDialog();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            Shutdown();
+        }
     }
 }

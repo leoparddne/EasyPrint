@@ -6,17 +6,23 @@
         xmlns:local="clr-namespace:EasyPrint"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
+        Initialized="Window_Initialized"
         >
     <Grid Name="grid">
+        <Menu FontSize="18">
+            <MenuItem Header="打印(_P)" Click="printBtn_Click">
+            </MenuItem>
+        </Menu>
         <StackPanel>
             <!--Width="700" Height="200"-->
-            <WebBrowser Name="broswer" Source="http://172.8.10.82/"  VerticalAlignment="Top" HorizontalAlignment="Left" Navigated="WebBrowser_Navigated">
+            <!--<DocumentViewer Name="document">
+                
+            </DocumentViewer>-->
+            <WebBrowser Name="broswer" Source="http://172.8.10.82/"  VerticalAlignment="Top" HorizontalAlignment="Left" Navigated="WebBrowser_Navigated" Margin="0,28,0,0">
 
             </WebBrowser>
-            <Label FontSize="20">中文测试tesdfksljflskdj</Label>
-            <Image Source="https://www.baidu.com/img/baidu_jgylogo3.gif" Width="150" Height="150" HorizontalAlignment="Left"/>
+            <!--<Label FontSize="20">中文测试tesdfksljflskdj</Label>
+            <Image Source="https://www.baidu.com/img/baidu_jgylogo3.gif" Width="150" Height="150" HorizontalAlignment="Left"/>-->
         </StackPanel>
-
-        <Button Width="200" Height="110" Name="printBtn" Click="printBtn_Click" VerticalAlignment="Bottom" Margin="0 0 0 80">打印</Button>
     </Grid>
 </Window>

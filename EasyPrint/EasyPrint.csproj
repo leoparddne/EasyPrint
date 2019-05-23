@@ -71,6 +71,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OperatorTypeEnum.cs" />
     <Compile Include="Preview.xaml.cs">
       <DependentUpon>Preview.xaml</DependentUpon>
     </Compile>
@@ -95,6 +96,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="reg.reg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

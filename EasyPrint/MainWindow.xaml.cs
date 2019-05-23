@@ -21,11 +21,16 @@ namespace EasyPrint
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private OperatorTypeEnum pRINT;
+        private string v;
+
+        public MainWindow(OperatorTypeEnum pRINT, string v)
         {
+            this.pRINT = pRINT;
+            this.v = v;
             InitializeComponent();
         }
-
+        
         private void printBtn_Click(object sender, RoutedEventArgs e)
         {
             PrintDialog dlg = new PrintDialog();
@@ -66,6 +71,11 @@ namespace EasyPrint
             if (objComWebBrowser == null) return;
 
             objComWebBrowser.GetType().InvokeMember("Silent", BindingFlags.SetProperty, null, objComWebBrowser, new object[] { Hide });
+        }
+
+        private void Window_Initialized(object sender, EventArgs e)
+        {
+            MessageBox.Show("load finish");
         }
     }
 }

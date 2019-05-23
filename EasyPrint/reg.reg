@@ -1,0 +1,10 @@
+﻿ Windows Registry Editor Version 5.00  
+[HKEY_CLASSES_ROOT\EasyPrint]  
+"URL Protocol"="C:\\Program Files\\EasyPrint\\EasyPrint.exe"  
+@="EasyPrintProtocol"  
+[HKEY_CLASSES_ROOT\EasyPrint\DefaultIcon]  
+@="C:\\Program Files\\EasyPrint\\EasyPrint.exe,1"  
+[HKEY_CLASSES_ROOT\EasyPrint\shell]  
+[HKEY_CLASSES_ROOT\EasyPrint\shell\open]  
+[HKEY_CLASSES_ROOT\EasyPrint\shell\open\command]  
+@="\"C:\\Program Files\\EasyPrint\\EasyPrint.exe\" \"%1\""  
