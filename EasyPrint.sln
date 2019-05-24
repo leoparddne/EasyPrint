@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyPrint", "EasyPrint\EasyPrint.csproj", "{9D8EB7A2-9CA0-46E9-BB53-2C5CC9D6DF36}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{5CA68B88-6E95-4415-9835-6AB7B6B00A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reg", "Reg\Reg.csproj", "{5FB94D8D-978C-4374-B6E6-51D6A19C25FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,12 @@ Global
 		{9D8EB7A2-9CA0-46E9-BB53-2C5CC9D6DF36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D8EB7A2-9CA0-46E9-BB53-2C5CC9D6DF36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D8EB7A2-9CA0-46E9-BB53-2C5CC9D6DF36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CA68B88-6E95-4415-9835-6AB7B6B00A8B}.Debug|Any CPU.ActiveCfg = Debug
+		{5CA68B88-6E95-4415-9835-6AB7B6B00A8B}.Release|Any CPU.ActiveCfg = Release
+		{5FB94D8D-978C-4374-B6E6-51D6A19C25FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB94D8D-978C-4374-B6E6-51D6A19C25FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB94D8D-978C-4374-B6E6-51D6A19C25FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB94D8D-978C-4374-B6E6-51D6A19C25FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

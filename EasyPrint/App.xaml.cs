@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 
@@ -14,7 +15,6 @@ namespace EasyPrint
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-
             if (e.Args.Length != 1)
             {
                 MessageBox.Show("参数数量错误");
@@ -24,21 +24,21 @@ namespace EasyPrint
             {
                 var value = e.Args[0];
                 var startStr = "easyprint://";
-                if(value.StartsWith(startStr))
+                if (value.StartsWith(startStr))
                 {
                     var index = value.IndexOf(startStr);
-                    value = value.Substring(index+ startStr.Length);
+                    value = value.Substring(index + startStr.Length);
                     //去除末尾【/】
-                    value = value.Substring(0, value.Length-1);
+                    value = value.Substring(0, value.Length - 1);
                 }
 
                 var data = value.Split('&');
-                if(data.Length!=2)
+                if (data.Length != 2)
                 {
                     MessageBox.Show("参数错误");
                     Shutdown();
                 }
-                
+
                 switch (data[0])
                 {
                     //直接打印
