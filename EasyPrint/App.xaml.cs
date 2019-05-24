@@ -17,7 +17,7 @@ namespace EasyPrint
 
             if (e.Args.Length != 1)
             {
-                MessageBox.Show("count:" + e.Args.Length);
+                MessageBox.Show("参数数量错误");
                 Shutdown();
             }
             else
@@ -30,23 +30,24 @@ namespace EasyPrint
                     value = value.Substring(index+ startStr.Length);
                     //去除末尾【/】
                     value = value.Substring(0, value.Length-1);
-                    MessageBox.Show("value:" + value);
                 }
 
                 var data = value.Split('&');
                 if(data.Length!=2)
                 {
+                    MessageBox.Show("参数错误");
                     Shutdown();
                 }
+                
                 switch (data[0])
                 {
                     //直接打印
-                    case "1":
+                    case "0":
                         var window = new EasyPrint.MainWindow(OperatorTypeEnum.PRINT, data[1]);
-                        window.ShowDialog();
+                        window.print();
                         break;
                     //预览
-                    case "2":
+                    case "1":
                         var preview = new EasyPrint.MainWindow(OperatorTypeEnum.PREVIEW, data[1]);
                         preview.ShowDialog();
                         break;

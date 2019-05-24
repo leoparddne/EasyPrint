@@ -10,15 +10,16 @@
         >
     <Grid Name="grid">
         <Menu FontSize="18">
-            <MenuItem Header="打印(_P)" Click="printBtn_Click">
-            </MenuItem>
+            <MenuItem Header="打印(_P)" Click="printBtn_Click"></MenuItem>
+            <MenuItem Header="选择打印机打印(_C)" Click="ChoosePrinter_Click"></MenuItem>
+
         </Menu>
         <StackPanel>
             <!--Width="700" Height="200"-->
             <!--<DocumentViewer Name="document">
                 
             </DocumentViewer>-->
-            <WebBrowser Name="broswer" Source="http://172.8.10.82/"  VerticalAlignment="Top" HorizontalAlignment="Left" Navigated="WebBrowser_Navigated" Margin="0,28,0,0">
+            <WebBrowser Name="broswer"  VerticalAlignment="Top" HorizontalAlignment="Left" Navigated="WebBrowser_Navigated" Margin="0,28,0,0">
 
             </WebBrowser>
             <!--<Label FontSize="20">中文测试tesdfksljflskdj</Label>
