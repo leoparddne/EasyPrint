@@ -1,4 +1,5 @@
 # EasyPrint
+<a href="https://www.cnblogs.com/ives/p/EasyPrint.html">参考使用方式</a>
 pc端打印插件  
 安装后可以实现打印功能  
 支持所有浏览器  
